@@ -92,6 +92,19 @@
                 'code' => 400
             ];
         }
+    }else if($kind == 'changeuse'){
+        mysqli_query($connect,"UPDATE vel_sim SET usenum='$used' WHERE addyear='$year' AND addmonth='$month'");
+        $res = mysqli_affected_rows($connect);
+        if($res>0){
+            $post = [
+                'count' => $used,
+                'code' => 200
+            ];
+        }else{
+            $post = [
+                'code' => 400
+            ]; 
+        }  
     }
     echo json_encode($post);
 ?>
