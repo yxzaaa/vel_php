@@ -27,9 +27,9 @@
         for($i=0;$i<sizeof($jsonData);$i++){
             $data = $jsonData[$i];
             if($i<sizeof($jsonData)-1){
-                $sql .= "(NULL,'$data[0]','$comName','$bid','$data[1]','$data[2]','$data[3]','$data[4]','$data[5]','$data[6]','$data[7]'),";
+                $sql .= "(NULL,'$data[0]','$comName','$bid','$data[1]','$data[2]','$data[3]','$data[4]','$data[5]','$data[6]','$data[7]','$data[8]'),";
             }else{
-                $sql .= "(NULL,'$data[0]','$comName','$bid','$data[1]','$data[2]','$data[3]','$data[4]','$data[5]','$data[6]','$data[7]');";
+                $sql .= "(NULL,'$data[0]','$comName','$bid','$data[1]','$data[2]','$data[3]','$data[4]','$data[5]','$data[6]','$data[7]','$data[8]');";
             };
         };
         mysqli_query($connect,$sql);
